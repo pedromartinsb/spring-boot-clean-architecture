@@ -1,0 +1,19 @@
+version: "3.7"
+services:
+  api-database:
+    image: mongo:latest
+    container-name: "api-database"
+    restart: always
+    command: mongod --port 27018
+    ports:
+      - "27018:27018"
+
+  api-service:
+    build: .
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - api-database
+    links:
+      - api-database

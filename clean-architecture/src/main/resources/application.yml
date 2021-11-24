@@ -1,0 +1,15 @@
+
+spring:
+  application:
+    name: clean-architecture
+  data:
+     mongodb:
+        uri: mongodb://api-database:27018/SicredVoting?serverSelectionTimeoutMS=1000&connectTimeoutMS=1000
+
+baseurl:
+  v1: clean-architecture/v1
+
+feign:
+  cpfValidator:
+    url: https://user-info.herokuapp.com/
+    name: usersApi

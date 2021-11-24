@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: sicred-voting
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/SicrediVoting?serverSelectionTimeoutMS=1000&connectTimeoutMS=1000  
+
+mongodb.encrypt:
+  keys:
+    - version: 1
+      key: hqHKBLV83LpCqzKpf8OvutbCs+O5wX5BPu3btWpEvXA=
+
+baseurl:
+  v1: sicred/voting/v1
+
+server:
+  port: 8000
+
